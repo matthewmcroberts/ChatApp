@@ -26,6 +26,20 @@ export default function DropDown() {
         return () => document.removeEventListener("click", clickHandler);
     });
 
+    useEffect(() => {
+        const keyHandler = ({keyCode}) => {
+            if(!dropdownOpen || keyCode !== 27) {
+                return;
+            }
+
+            setDropdownOpen(false);
+        }
+
+        document.addEventListener("keydown", keyHandler);
+
+        return () => document.removeEventListener("keydown", keyHandler);
+    });
+
     return (
         <div className="relative flex">
             <button ref={trigger} className="text-[#98A6AD] hover:text-body" onClick={() => setDropdownOpen((prev) => !prev)}>
