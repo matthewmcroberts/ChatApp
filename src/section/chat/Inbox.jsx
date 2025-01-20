@@ -2,7 +2,7 @@ import React from 'react'
 
 import User01 from "../../images/user/user-01.png"
 import { DotsThree, LinkSimple, PaperPlaneTilt, Smiley } from '@phosphor-icons/react'
-import DropDown from '../../components/DropDown'
+import Dropdown from '../../components/Dropdown'
 
 export default function Inbox() {
     return (
@@ -23,7 +23,7 @@ export default function Inbox() {
                 </div>
 
                 <div>
-                    <DropDown />
+                    <Dropdown />
                 </div>
             </div>
 

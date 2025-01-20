@@ -1,7 +1,7 @@
 import { DotsThree, PencilSimple, Trash } from '@phosphor-icons/react'
 import React, { useEffect, useRef, useState } from 'react'
 
-export default function DropDown() {
+export default function Dropdown() {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
