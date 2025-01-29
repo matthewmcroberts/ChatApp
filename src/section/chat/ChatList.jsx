@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from '@phosphor-icons/react'
-import React from 'react'
+import React, { useState } from 'react'
 
 import User01 from "../../images/user/user-01.png";
 import User02 from "../../images/user/user-02.png";
@@ -54,6 +54,9 @@ const list = [
 ];
 
 export default function ChatList() {
+
+    const [selected, setSelected] = useState(0);
+
     return (
         <div className='hidden h-full flex-col xl:flex xl:w-1/4'>
             <div className='sticky border-b border-stroke dark:border-strokedark px-6 py-7.5 flex flex-row'>
@@ -77,7 +80,7 @@ export default function ChatList() {
                     {/* Chat List Item */}
                     {list.map((object, index) => {
                         return (
-                            <div className="flex cursor-pointer items-center rounded px-4 py-2 hover:bg-gray-2 dark:hover:bg-strokedark" key={index}>
+                            <div className={`flex cursor-pointer items-center rounded px-4 py-2 dark:hover:bg-strokedark ${selected === index ? "bg-gray dark:bg-boxdark-2 dark:hover:bg-boxdark-2" : "hover:bg-gray-2 dark:hover:bg-boxdark-2/90"}`} key={index} onClick={() => {setSelected(index);}}>
                                 <div className="relative mr-3.5 h-11 w-full max-w-11 rounded-full">
                                     <img src={object.imgSrc} alt="profile" className="h-full w-full rounded-full object-cover object-center" />
                                     <span className="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-gray-2 bg-success"></span>
