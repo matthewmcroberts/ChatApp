@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import User01 from "../../images/user/user-01.png"
-import { DotsThree, LinkSimple, PaperPlaneTilt, Phone, Smiley, VideoCamera } from '@phosphor-icons/react'
+import { LinkSimple, PaperPlaneTilt, Phone, VideoCamera } from '@phosphor-icons/react'
 import Dropdown from '../../components/Dropdown'
 import EmojiPicker from '../../components/EmojiPicker'
 import UserInfo from './UserInfo'

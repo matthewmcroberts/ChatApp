@@ -35,7 +35,7 @@ export default function EmojiPicker() {
     return (
         <div className="relative flex">
             <button ref={buttonRef} className="text-[#98A6AD] hover:text-body" onClick={handleTrigger}>
-                <Smiley size={20} className="text-body" />
+                <Smiley size={20} className="text-body hover:text-primary" />
             </button>
 
             {pickerOpen && (
